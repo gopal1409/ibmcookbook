@@ -1,0 +1,196 @@
+    1  pwd
+    2  df -hla
+    3  ping 8.8.8.8
+    4  ifconfig
+    5  if config
+    6  ifconfig
+    7  ipconfig
+    8  ip config
+    9  ifconfig -a
+   10  ifconfig
+   11  ip addr
+   12  shutdown
+   13  shutdown now
+   14  ip addr
+   15  shutdown now
+   16  exit
+   17  yum install epel-release
+   18  yum install ansible
+   19  history
+   20  ansible --version
+   21  ssh-keygen -t rsa
+   22  ssh-copy-id -i ~/.ssh/id_rsa root@192.168.10.136
+   23  ssh root@192.168.10.136
+   24  ansible all -m ping
+   25  vi /etc/hosts
+   26  cat /etc/hosts
+   27  ansible all -m ping
+   28  cd /etc/ansible/
+   29  ls
+   30  vi hosts
+   31  cat hosts
+   32  ansible all -m ping
+   33  ssh root@slave
+   34  ip a
+   35  exit
+   36  vi /etc/hosts
+   37  ansible all -m ping
+   38  hostnamect set-hostname --static ansiblemaster
+   39  hostnamectl set-hostname --static ansiblemaster
+   40  bash
+   41  cd /etc/ansible/
+   42  ls
+   43  cat hosts
+   44  pwd
+   45  ls
+   46  cat ansible.cfg 
+   47  ansible slave -m ping
+   48  cat ansible.cfg 
+   49  cat ansible.cfg | more
+   50  vi hosts
+   51  ansible web -m ping
+   52  vi hosts
+   53  ansible web -m ping
+   54  vi hosts
+   55  ansible linux -m ping
+   56  vi hosts
+   57  ansible linux -m ping
+   58  vi hosts
+   59  ansible linux -m ping
+   60  vi hosts
+   61  ansible all -m ping
+   62  ansible all -m command -a uptime
+   63  ansible all -m shell -a uptime
+   64  ansible all -m uptime
+   65  ansible all -a uptime
+   66  ansible all -a id
+   67  ansible all -a gid
+   68  ansible all -a "free -m"
+   69  ansible all -m shell -a "cat /etc/passwd"
+   70  history
+   71  ansible slave -m file -a "path=/tmp/x state=directory mode 0755"
+   72  ansible slave -m shell -a "path=/tmp/x state=directory mode 0755"
+   73  ansible slave -m file -a "path=/tmp/x state=directory mode=0755"
+   74  ssh root@slave
+   75  touch /tmp/y
+   76  ansible slave -m file -a "src=/tmp/y dest=/tmp/z"
+   77  ansible slave -m file -a "src=/tmp/y dest=/tmp/z state=present"
+   78  ansible slave -m copy -a "src=/tmp/y dest=/tmp/z"
+   79  ansible slave -m file -a "dest=/tmp/foo/a.txt mode=600" --ask-sudo-pass
+   80  ansible slave -m file -a "dest=/tmp/foo/a.txt mode=600" --vault-password-file
+   81  ansible slave -m user -a "name=testuser group=weblogic createhome=yes"
+   82  ansible slave -m group -a "name=weblogic state=present"
+   83  ansible slave -m user -a "name=testuser group=weblogic createhome=yes"
+   84  history
+   85  ansible-doc file
+   86  !
+   87  ls
+   88  ansible slave -m yum -a "name=tree state=present"
+   89  ansible slave -m yum -a "name=tree state=absent"
+   90  ansible slave -m yum -a "name=tree state=absen"
+   91  ansible slave -m service -a "name=httpd state=start enabled=yes"
+   92  cd root
+   93  cd /root
+   94  mkdir project1
+   95  cd project1/
+   96  touch ansible.cfg
+   97  touch hosts
+   98  ls
+   99  vi ansible.cfg 
+  100  ls
+  101  vi hosts
+  102  ls
+  103  cat ansible.cfg 
+  104  cat hosts 
+  105  vi nginxplay.yaml
+  106  ansible-playbook nginxplay.yaml 
+  107  vi nginxplay.yaml 
+  108  ansible-playbook nginxplay.yaml 
+  109  vi nginxplay.yaml 
+  110  ansible-playbook nginxplay.yaml 
+  111  vi nginxplay.yaml 
+  112  ansible-playbook nginxplay.yaml 
+  113  vi nginxplay.yaml 
+  114  ansible-playbook nginxplay.yaml 
+  115  vi nginxplay.yaml 
+  116  ansible-playbook nginxplay.yaml 
+  117  vi nginxplay.yaml 
+  118  ansible slave -m setup
+  119  vi nginxplay.yaml -vv
+  120  ansible slave -m setup --vv
+  121  ansible-playbook nginxplay.yaml --vv
+  122  ansible-playbook nginxplay.yaml 
+  123  ls
+  124  vi awsomeplay.yaml
+  125  ip a
+  126  wget https://packages.chef.io/files/stable/chef-workstation/20.7.81/el/7/chef-workstation-20.7.81-1.el7.x86_64.rpm
+  127  rpm -Uvh chef-workstation-20.7.81-1.el7.x86_64.rpm 
+  128  chef --version
+  129  ls
+  130  clear
+  131  history
+  132  clear
+  133  ls
+  134  vi hello.rb
+  135  chef-client --local-mode hello.rb
+  136  cat hello.rb 
+  137  cd /ls
+  138  cd /
+  139  ;s
+  140  ls
+  141  cd /root
+  142  vi hello.rb 
+  143  chef-client --local-mode hello.rb
+  144  cat hello.rb 
+  145  vi setup.rb
+  146  chef-client --local-mode setup.rb 
+  147  vi setup.rb
+  148  chef-client --local-mode setup.rb 
+  149  vi setup.rb
+  150  chef-client --local-mode setup.rb 
+  151  cat setup.rb 
+  152  tree
+  153  ls
+  154  clear
+  155  mkdir cookbooks
+  156  ls
+  157  chef generate cookbook cookbooks/apache
+  158  history
+  159  tree cookbooks/apache/
+  160  history
+  161  tree cookbooks/apache/
+  162  chef generate 
+  163  chef generate recipe cookbooks/apache/ server
+  164  tree cookbooks/apache/
+  165  historu
+  166  history
+  167  vi cookbooks/apache/recipes/server.rb 
+  168  chef-client -zr 'apache::server'
+  169  vi cookbooks/apache/recipes/server.rb 
+  170  chef-client -zr 'apache'
+  171  tree cookbooks/apache/
+  172  vi cookbooks/apache/recipes/default.rb 
+  173  cat cookbooks/apache/recipes/default.rb 
+  174  chef-client -zr 'apache'
+  175  ls
+  176  mv hello.rb cookbooks/apache/recipes/
+  177  tree cookbooks/apache/recipes/
+  178  vi cookbooks/apache/recipes/default.rb 
+  179  chef-client -zr 'apache'
+  180  history
+  181  vi cookbooks/apache/recipes/default.rb 
+  182  tree cookbooks/apache/
+  183  ls
+  184  mv setup.rb cookbooks/apache/recipes/
+  185  tree cookbooks/apache/
+  186  vi cookbooks/apache/recipes/default.rb 
+  187  chef-client -zr 'apache'
+  188  ls
+  189  cd cookbooks/
+  190  git init
+  191  git add .
+  192  git remote add origin https://github.com/gopal1409/ibmcookbook.git
+  193  git push -u origin master
+  194  git commit -m "cookbook"
+  195  git push -u origin master
+  196  history > chefcommand.txt
